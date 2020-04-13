@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "64C441C324410474001732C7"
-               BuildableName = "Vocable_Presets.framework"
+               BuildableName = "Vocable-Presets.framework"
                BlueprintName = "Vocable-Presets"
                ReferencedContainer = "container:Vocable-Presets.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "64C441C324410474001732C7"
-            BuildableName = "Vocable_Presets.framework"
+            BuildableName = "Vocable-Presets.framework"
             BlueprintName = "Vocable-Presets"
             ReferencedContainer = "container:Vocable-Presets.xcodeproj">
          </BuildableReference>

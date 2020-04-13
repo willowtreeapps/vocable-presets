@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64C441C924410474001732C7 /* Vocable_Presets.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C441C724410474001732C7 /* Vocable_Presets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64C441C924410474001732C7 /* Vocable-Presets.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C441C724410474001732C7 /* Vocable-Presets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64F3A4D72445065C00588A84 /* TextPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3A4D62445065C00588A84 /* TextPresets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64C441C424410474001732C7 /* Vocable_Presets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vocable_Presets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		64C441C724410474001732C7 /* Vocable_Presets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vocable_Presets.h; sourceTree = "<group>"; };
+		64C441C424410474001732C7 /* Vocable-Presets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Vocable-Presets.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C441C724410474001732C7 /* Vocable-Presets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vocable-Presets.h"; sourceTree = "<group>"; };
 		64C441C824410474001732C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F3A4D62445065C00588A84 /* TextPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPresets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,7 +41,7 @@
 		64C441C524410474001732C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64C441C424410474001732C7 /* Vocable_Presets.framework */,
+				64C441C424410474001732C7 /* Vocable-Presets.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -49,7 +49,7 @@
 		64C441C624410474001732C7 /* Vocable-Presets */ = {
 			isa = PBXGroup;
 			children = (
-				64C441C724410474001732C7 /* Vocable_Presets.h */,
+				64C441C724410474001732C7 /* Vocable-Presets.h */,
 				64C441C824410474001732C7 /* Info.plist */,
 			);
 			path = "Vocable-Presets";
@@ -62,7 +62,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C441C924410474001732C7 /* Vocable_Presets.h in Headers */,
+				64C441C924410474001732C7 /* Vocable-Presets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			);
 			name = "Vocable-Presets";
 			productName = "Vocable-Presets";
-			productReference = 64C441C424410474001732C7 /* Vocable_Presets.framework */;
+			productReference = 64C441C424410474001732C7 /* Vocable-Presets.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -250,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +280,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willowtreeapps.Vocable-Presets";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "Vocable-Presets";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -306,7 +306,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willowtreeapps.Vocable-Presets";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "Vocable-Presets";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
