@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		64C441C924410474001732C7 /* Vocable_Presets.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C441C724410474001732C7 /* Vocable_Presets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64F3A4D72445065C00588A84 /* TextPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3A4D62445065C00588A84 /* TextPresets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64C441C424410474001732C7 /* Vocable_Presets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vocable_Presets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C441C724410474001732C7 /* Vocable_Presets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vocable_Presets.h; sourceTree = "<group>"; };
 		64C441C824410474001732C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64F3A4D62445065C00588A84 /* TextPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPresets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 		64C441BA24410474001732C7 = {
 			isa = PBXGroup;
 			children = (
+				64F3A4D62445065C00588A84 /* TextPresets.swift */,
 				64C441C624410474001732C7 /* Vocable-Presets */,
 				64C441C524410474001732C7 /* Products */,
 			);
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					64C441C324410474001732C7 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F3A4D72445065C00588A84 /* TextPresets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +265,7 @@
 		64C441CD24410474001732C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y32EQUAEWX;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.willowtreeapps.Vocable-Presets";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		64C441CE24410474001732C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y32EQUAEWX;
