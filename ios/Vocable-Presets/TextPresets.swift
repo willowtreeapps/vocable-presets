@@ -48,7 +48,12 @@ public struct TextPresets {
     }
 
     private static func dataFromBundle() -> Data? {
-        if let path = Bundle.main.path(forResource: "textpresets", ofType: "json") {
+
+        guard let bundle = Bundle(identifier: "com.willowtreeapps.VocablePresets") else {
+            return nil
+        }
+
+        if let path = bundle.path(forResource: "textpresets", ofType: "json") {
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             } catch {
