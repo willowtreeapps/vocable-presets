@@ -12,7 +12,7 @@ import Foundation
 public struct PresetData: Codable {
 
     public let schemaVersion: Int
-    public let categories: [PresetCategory]
+    public var categories: [PresetCategory]
     public let phrases: [PresetPhrase]
 
 }
@@ -20,7 +20,7 @@ public struct PresetData: Codable {
 public struct PresetCategory: Codable {
 
     public let id: String
-    public let localizedName: [String: String]
+    public var localizedName: [String: String]
     public let hidden: Bool
 
 }
@@ -29,7 +29,7 @@ public struct PresetPhrase: Codable {
 
     public let id: String
     public let categoryIds: [String]
-    public let localizedUtterance: [String: String]
+    public var localizedUtterance: [String: String]
 
 }
 
@@ -38,7 +38,22 @@ public struct TextPresets {
     public static var presets: PresetData? {
         if let json = dataFromBundle() {
             do {
-                return try JSONDecoder().decode(PresetData.self, from: json)
+
+                let json = try JSONDecoder().decode(PresetData.self, from: json)
+
+                for var category in json.categories {
+                    category.localizedName = category.localizedName.mapValues { localization in
+                        NSLocalizedString(category.id, tableName: localization, comment: "")
+                    }
+                }
+
+                for var phrase in json.phrases {
+                    phrase.localizedUtterance = phrase.localizedUtterance.mapValues { localization in
+                        NSLocalizedString(phrase.id, tableName: localization, comment: "")
+                    }
+                }
+
+                return json
             } catch {
                 assertionFailure("Error decoding PresetData: \(error)")
             }

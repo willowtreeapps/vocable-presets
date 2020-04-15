@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		6405B73E244615B500F3EFA2 /* textpresets.json in Resources */ = {isa = PBXBuildFile; fileRef = 6405B73D244615B500F3EFA2 /* textpresets.json */; };
 		64C441C924410474001732C7 /* VocablePresets.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C441C724410474001732C7 /* VocablePresets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D50ED42447AF1D00E6D2E6 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D50ED22447AF1D00E6D2E6 /* en.strings */; };
+		64D50ED72447AF4700E6D2E6 /* de.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D50ED52447AF4700E6D2E6 /* de.strings */; };
 		64F3A4D72445065C00588A84 /* TextPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3A4D62445065C00588A84 /* TextPresets.swift */; };
-		6B8440BF2447514C007A4DC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B8440C12447514C007A4DC6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +19,9 @@
 		64C441C424410474001732C7 /* VocablePresets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VocablePresets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C441C724410474001732C7 /* VocablePresets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VocablePresets.h; sourceTree = "<group>"; };
 		64C441C824410474001732C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D50ED32447AF1D00E6D2E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/en.strings; sourceTree = SOURCE_ROOT; };
+		64D50ED62447AF4700E6D2E6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/de.strings; sourceTree = SOURCE_ROOT; };
 		64F3A4D62445065C00588A84 /* TextPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPresets.swift; sourceTree = "<group>"; };
-		6B8440C02447514C007A4DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6B8440C224475151007A4DC6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +40,8 @@
 			children = (
 				6405B73D244615B500F3EFA2 /* textpresets.json */,
 				64F3A4D62445065C00588A84 /* TextPresets.swift */,
-				6B8440C12447514C007A4DC6 /* Localizable.strings */,
+				64D50ED22447AF1D00E6D2E6 /* en.strings */,
+				64D50ED52447AF4700E6D2E6 /* de.strings */,
 				64C441C624410474001732C7 /* VocablePresets */,
 				64C441C524410474001732C7 /* Products */,
 			);
@@ -100,6 +102,7 @@
 		64C441BB24410474001732C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "com.willowtreeapps.vocable-presets";
 				TargetAttributes = {
@@ -134,7 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6405B73E244615B500F3EFA2 /* textpresets.json in Resources */,
-				6B8440BF2447514C007A4DC6 /* Localizable.strings in Resources */,
+				64D50ED42447AF1D00E6D2E6 /* en.strings in Resources */,
+				64D50ED72447AF4700E6D2E6 /* de.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,13 +156,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6B8440C12447514C007A4DC6 /* Localizable.strings */ = {
+		64D50ED22447AF1D00E6D2E6 /* en.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B8440C02447514C007A4DC6 /* en */,
-				6B8440C224475151007A4DC6 /* de */,
+				64D50ED32447AF1D00E6D2E6 /* en */,
 			);
-			name = Localizable.strings;
+			name = en.strings;
+			sourceTree = "<group>";
+		};
+		64D50ED52447AF4700E6D2E6 /* de.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64D50ED62447AF4700E6D2E6 /* de */,
+			);
+			name = de.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
