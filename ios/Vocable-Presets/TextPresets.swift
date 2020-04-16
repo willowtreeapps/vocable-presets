@@ -12,28 +12,42 @@ import Foundation
 public struct PresetData: Codable {
 
     public let schemaVersion: Int
-    public var categories: [PresetCategory]
+    public let categories: [PresetCategory]
     public let phrases: [PresetPhrase]
 
 }
 
 public struct PresetCategory: Codable {
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case hidden
+    }
+
     public let id: String
-    public var localizedName: [String: String]
     public let hidden: Bool
+    public var localizedName: [String: String] = [:]
 
 }
 
 public struct PresetPhrase: Codable {
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case categoryIds
+    }
+
     public let id: String
     public let categoryIds: [String]
-    public var localizedUtterance: [String: String]
+    public var localizedUtterance: [String: String] = [:]
 
 }
 
 public struct TextPresets {
+
+    private static var localBundle: Bundle {
+        return Bundle(identifier: "com.willowtreeapps.VocablePresets")!
+    }
 
     public static var presets: PresetData? {
         if let json = dataFromBundle() {
@@ -41,19 +55,32 @@ public struct TextPresets {
 
                 let json = try JSONDecoder().decode(PresetData.self, from: json)
 
-                for var category in json.categories {
-                    category.localizedName = category.localizedName.mapValues { localization in
-                        NSLocalizedString(category.id, tableName: localization, comment: "")
+                let localizations = localBundle.localizations
+                let transformedCategories = json.categories.map { category -> PresetCategory in
+                    var preset = PresetCategory(id: category.id, hidden: category.hidden)
+                    preset.localizedName = localizations.reduce([String: String]()) { (result, localization) in
+                        var result = result
+                        let value = NSLocalizedString(category.id, tableName: localization, bundle: localBundle, comment: "")
+                        result[localization] = value
+                        return result
                     }
+                    return preset
                 }
 
-                for var phrase in json.phrases {
-                    phrase.localizedUtterance = phrase.localizedUtterance.mapValues { localization in
-                        NSLocalizedString(phrase.id, tableName: localization, comment: "")
+                let transformedPhrases = json.phrases.map { phrase -> PresetPhrase in
+                    var preset = PresetPhrase(id: phrase.id, categoryIds: phrase.categoryIds)
+                    preset.localizedUtterance = localizations.reduce([String: String]()) { (result, localization) in
+                        var result = result
+                        let value = NSLocalizedString(phrase.id, tableName: localization, bundle: localBundle, comment: "")
+                        result[localization] = value
+                        return result
                     }
+                    return preset
                 }
-
-                return json
+                let result = PresetData(schemaVersion: json.schemaVersion,
+                                        categories: transformedCategories,
+                                        phrases: transformedPhrases)
+                return result
             } catch {
                 assertionFailure("Error decoding PresetData: \(error)")
             }
@@ -64,11 +91,7 @@ public struct TextPresets {
 
     private static func dataFromBundle() -> Data? {
 
-        guard let bundle = Bundle(identifier: "com.willowtreeapps.VocablePresets") else {
-            return nil
-        }
-
-        if let path = bundle.path(forResource: "textpresets", ofType: "json") {
+        if let path = localBundle.path(forResource: "presets", ofType: "json") {
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             } catch {

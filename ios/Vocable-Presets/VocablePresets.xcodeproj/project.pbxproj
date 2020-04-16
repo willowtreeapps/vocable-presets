@@ -3,25 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6405B73E244615B500F3EFA2 /* textpresets.json in Resources */ = {isa = PBXBuildFile; fileRef = 6405B73D244615B500F3EFA2 /* textpresets.json */; };
+		6405B73E244615B500F3EFA2 /* presets.json in Resources */ = {isa = PBXBuildFile; fileRef = 6405B73D244615B500F3EFA2 /* presets.json */; };
 		64C441C924410474001732C7 /* VocablePresets.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C441C724410474001732C7 /* VocablePresets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64D50ED42447AF1D00E6D2E6 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D50ED22447AF1D00E6D2E6 /* en.strings */; };
 		64D50ED72447AF4700E6D2E6 /* de.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D50ED52447AF4700E6D2E6 /* de.strings */; };
 		64F3A4D72445065C00588A84 /* TextPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3A4D62445065C00588A84 /* TextPresets.swift */; };
+		6B8440CA24488DA1007A4DC6 /* VocablePresetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8440C924488DA1007A4DC6 /* VocablePresetsTests.swift */; };
+		6B8440CC24488DA1007A4DC6 /* VocablePresets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C441C424410474001732C7 /* VocablePresets.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B8440CD24488DA1007A4DC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64C441BB24410474001732C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64C441C324410474001732C7;
+			remoteInfo = VocablePresets;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		6405B73D244615B500F3EFA2 /* textpresets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = textpresets.json; path = ../../textpresets.json; sourceTree = "<group>"; };
+		6405B73D244615B500F3EFA2 /* presets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = presets.json; path = ../../presets.json; sourceTree = "<group>"; };
 		64C441C424410474001732C7 /* VocablePresets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VocablePresets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C441C724410474001732C7 /* VocablePresets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VocablePresets.h; sourceTree = "<group>"; };
 		64C441C824410474001732C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D50ED32447AF1D00E6D2E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/en.strings; sourceTree = SOURCE_ROOT; };
 		64D50ED62447AF4700E6D2E6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/de.strings; sourceTree = SOURCE_ROOT; };
 		64F3A4D62445065C00588A84 /* TextPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPresets.swift; sourceTree = "<group>"; };
+		6B8440C724488DA1007A4DC6 /* VocablePresetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocablePresetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B8440C924488DA1007A4DC6 /* VocablePresetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocablePresetsTests.swift; sourceTree = "<group>"; };
+		6B8440CB24488DA1007A4DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B8440D4244898D8007A4DC6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/en.strings; sourceTree = "<group>"; };
+		6B8440D5244898DE007A4DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/de.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +49,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B8440C424488DA1007A4DC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B8440CC24488DA1007A4DC6 /* VocablePresets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		64C441BA24410474001732C7 = {
 			isa = PBXGroup;
 			children = (
-				6405B73D244615B500F3EFA2 /* textpresets.json */,
+				6405B73D244615B500F3EFA2 /* presets.json */,
 				64F3A4D62445065C00588A84 /* TextPresets.swift */,
 				64D50ED22447AF1D00E6D2E6 /* en.strings */,
 				64D50ED52447AF4700E6D2E6 /* de.strings */,
 				64C441C624410474001732C7 /* VocablePresets */,
+				6B8440C824488DA1007A4DC6 /* VocablePresetsTests */,
 				64C441C524410474001732C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				64C441C424410474001732C7 /* VocablePresets.framework */,
+				6B8440C724488DA1007A4DC6 /* VocablePresetsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +89,15 @@
 				64C441C824410474001732C7 /* Info.plist */,
 			);
 			path = VocablePresets;
+			sourceTree = "<group>";
+		};
+		6B8440C824488DA1007A4DC6 /* VocablePresetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B8440C924488DA1007A4DC6 /* VocablePresetsTests.swift */,
+				6B8440CB24488DA1007A4DC6 /* Info.plist */,
+			);
+			path = VocablePresetsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +132,24 @@
 			productReference = 64C441C424410474001732C7 /* VocablePresets.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6B8440C624488DA1007A4DC6 /* VocablePresetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B8440CF24488DA1007A4DC6 /* Build configuration list for PBXNativeTarget "VocablePresetsTests" */;
+			buildPhases = (
+				6B8440C324488DA1007A4DC6 /* Sources */,
+				6B8440C424488DA1007A4DC6 /* Frameworks */,
+				6B8440C524488DA1007A4DC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B8440CE24488DA1007A4DC6 /* PBXTargetDependency */,
+			);
+			name = VocablePresetsTests;
+			productName = VocablePresetsTests;
+			productReference = 6B8440C724488DA1007A4DC6 /* VocablePresetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +163,9 @@
 					64C441C324410474001732C7 = {
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
+					};
+					6B8440C624488DA1007A4DC6 = {
+						CreatedOnToolsVersion = 11.4;
 					};
 				};
 			};
@@ -127,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				64C441C324410474001732C7 /* VocablePresets */,
+				6B8440C624488DA1007A4DC6 /* VocablePresetsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -136,9 +194,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6405B73E244615B500F3EFA2 /* textpresets.json in Resources */,
+				6405B73E244615B500F3EFA2 /* presets.json in Resources */,
 				64D50ED42447AF1D00E6D2E6 /* en.strings in Resources */,
 				64D50ED72447AF4700E6D2E6 /* de.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B8440C524488DA1007A4DC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,13 +218,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B8440C324488DA1007A4DC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B8440CA24488DA1007A4DC6 /* VocablePresetsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B8440CE24488DA1007A4DC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 64C441C324410474001732C7 /* VocablePresets */;
+			targetProxy = 6B8440CD24488DA1007A4DC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		64D50ED22447AF1D00E6D2E6 /* en.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				64D50ED32447AF1D00E6D2E6 /* en */,
+				6B8440D4244898D8007A4DC6 /* de */,
 			);
 			name = en.strings;
 			sourceTree = "<group>";
@@ -168,6 +251,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				64D50ED62447AF4700E6D2E6 /* de */,
+				6B8440D5244898DE007A4DC6 /* en */,
 			);
 			name = de.strings;
 			sourceTree = "<group>";
@@ -348,6 +432,44 @@
 			};
 			name = Release;
 		};
+		6B8440D024488DA1007A4DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FGS4H7UD9;
+				INFOPLIST_FILE = VocablePresetsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WillowTree.VocablePresetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B8440D124488DA1007A4DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FGS4H7UD9;
+				INFOPLIST_FILE = VocablePresetsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WillowTree.VocablePresetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +487,15 @@
 			buildConfigurations = (
 				64C441CD24410474001732C7 /* Debug */,
 				64C441CE24410474001732C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B8440CF24488DA1007A4DC6 /* Build configuration list for PBXNativeTarget "VocablePresetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B8440D024488DA1007A4DC6 /* Debug */,
+				6B8440D124488DA1007A4DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
