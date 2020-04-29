@@ -1,0 +1,4 @@
+files:
+  - source: /resources/source/Presets/CSV/en/*.csv
+    translation: /resources/%two_letters_code%/%original_file_name%
+    scheme: 'identifier,source_or_translation'
