@@ -1,8 +1,15 @@
-files:
-  - source: /resources/en/*.csv
-    translation: /resources/%two_letters_code%/%original_file_name%
-    scheme: 'identifier,source_or_translation'
-  - source: /resources/en/*.csv
-    translation: /resources/Android/res/values-%android_code%/%original_file_name%
-    scheme: 'identifier,source_or_translation'
+"files": [
+  {
+    "source": "/resources/en/*.csv",
+    "translation": "/resources/%two_letters_code%/%original_file_name%",
+    "scheme": "identifier,source_or_translation"
+  },
+  {
+    "source": "/resources/en/*.csv",
+    "translation": "/resources/Android/res/values-%android_code%/%original_file_name%",
+    "scheme": "identifier,source_or_translation"
+  }
+]
+
+
 
