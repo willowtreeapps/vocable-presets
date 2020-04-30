@@ -1,6 +1,8 @@
 files:
-  - source: /resources/source/Presets/CSV/en/*.csv
+  - source: /resources/en/*.csv
     translation: /resources/%two_letters_code%/%original_file_name%
     scheme: 'identifier,source_or_translation'
-  - source: /resources/source/Presets/Android/res/values-en-rUS/strings.xml
+  - source: /resources/en/*.csv
     translation: /resources/Android/res/values-%android_code%/%original_file_name%
+    scheme: 'identifier,source_or_translation'
+
